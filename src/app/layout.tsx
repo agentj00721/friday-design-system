@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   title: "Friday Design System",
   description:
     "A premium web-native brand operating system for Friday, the AI-native insurance guidance platform.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/assets/placeholders/friday-app-icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +37,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${mono.variable} h-full scroll-smooth antialiased`}
+      className={`${inter.variable} ${cormorant.variable} ${mono.variable} dark h-full scroll-smooth antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

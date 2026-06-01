@@ -96,6 +96,52 @@ body {
     linear-gradient(135deg, #020707 0%, #062020 48%, #010303 100%);
 }
 
+.brand-hero,
+.contrast-section {
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at 78% 20%, rgba(143, 227, 194, 0.4), transparent 30rem),
+    radial-gradient(circle at 25% 76%, rgba(15, 169, 143, 0.12), transparent 34rem),
+    linear-gradient(135deg, #f7faf9 0%, #e6f6f1 52%, #ffffff 100%);
+}
+
+.dark .brand-hero,
+.dark .contrast-section {
+  color: #f7faf9;
+  background:
+    radial-gradient(circle at 74% 20%, rgba(15, 169, 143, 0.32), transparent 28rem),
+    radial-gradient(circle at 53% 58%, rgba(143, 227, 194, 0.18), transparent 34rem),
+    linear-gradient(135deg, #020707 0%, #062020 48%, #010303 100%);
+}
+
+.mode-muted {
+  color: rgba(8, 40, 40, 0.72);
+}
+
+.dark .mode-muted {
+  color: rgba(247, 250, 249, 0.78);
+}
+
+.mode-line {
+  border-color: rgba(8, 40, 40, 0.12);
+}
+
+.dark .mode-line {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.mode-secondary-button {
+  color: var(--foreground);
+  background: rgba(255, 255, 255, 0.34);
+  border-color: rgba(8, 40, 40, 0.16);
+}
+
+.dark .mode-secondary-button {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
 .text-balance {
   text-wrap: balance;
 }

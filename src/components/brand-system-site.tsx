@@ -275,6 +275,7 @@ export function BrandSystemSite() {
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.style.colorScheme = theme;
   }, [theme]);
 
   return (
@@ -290,14 +291,14 @@ export function BrandSystemSite() {
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-[#082828] text-white dark:bg-white dark:text-[#082828]"
-            aria-label="Toggle color mode"
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
             {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
           </button>
         </nav>
       </header>
 
-      <section id="top" className="cinema-bg relative min-h-screen overflow-hidden px-5 pt-32 text-white sm:px-8">
+      <section id="top" className="brand-hero relative min-h-screen overflow-hidden px-5 pt-32 sm:px-8">
         <div className="noise" />
         <div className="arc-field" />
         <motion.div className="absolute left-[14%] top-[24%] h-2 w-2 rounded-full bg-[#8fe3c2] shadow-[0_0_30px_#8fe3c2]" animate={{ y: [0, 16, 0], opacity: [0.4, 1, 0.4] }} transition={{ duration: 5, repeat: Infinity }} />
@@ -305,18 +306,18 @@ export function BrandSystemSite() {
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <Reveal>
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.38em] text-[#8fe3c2]">Master Brand System</p>
-            <h1 className="font-editorial text-6xl leading-[0.92] text-balance text-white drop-shadow-[0_0_34px_rgba(255,255,255,.14)] sm:text-8xl lg:text-9xl">Friday Design System</h1>
-            <p className="mt-7 max-w-xl text-xl leading-9 text-white/88">The future of insurance understanding. Built for clarity. Designed for confidence.</p>
+            <h1 className="font-editorial text-6xl leading-[0.92] text-balance drop-shadow-[0_0_34px_rgba(255,255,255,.14)] sm:text-8xl lg:text-9xl">Friday Design System</h1>
+            <p className="mode-muted mt-7 max-w-xl text-xl leading-9">The future of insurance understanding. Built for clarity. Designed for confidence.</p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a href="#tokens" className="flex items-center gap-2 rounded-full bg-[#0fa98f] px-6 py-4 text-sm font-semibold text-[#020707] shadow-[0_0_42px_rgba(15,169,143,.5)]">Explore tokens <ArrowRight size={17} /></a>
-              <a href="/assets/logo/friday_logo_transparent.png" download className="flex items-center gap-2 rounded-full border border-white/18 px-6 py-4 text-sm font-semibold text-white backdrop-blur">Download logo <Download size={17} /></a>
-              <a href="/docs/design.md" download className="flex items-center gap-2 rounded-full border border-[#8fe3c2]/35 bg-white/8 px-6 py-4 text-sm font-semibold text-white shadow-[0_0_30px_rgba(143,227,194,.16)] backdrop-blur">Download design.md <FileText size={17} /></a>
+              <a href="/assets/logo/friday_logo_transparent.png" download className="mode-secondary-button flex items-center gap-2 rounded-full border px-6 py-4 text-sm font-semibold backdrop-blur">Download logo <Download size={17} /></a>
+              <a href="/docs/design.md" download className="mode-secondary-button flex items-center gap-2 rounded-full border px-6 py-4 text-sm font-semibold shadow-[0_0_30px_rgba(143,227,194,.16)] backdrop-blur">Download design.md <FileText size={17} /></a>
             </div>
           </Reveal>
           <Reveal><PathStair /></Reveal>
         </div>
-        <div className="relative z-10 mx-auto mt-10 grid max-w-7xl gap-4 border-t border-white/10 py-8 sm:grid-cols-3">
-          {["The user decides.", "The broker advises.", "Friday guides."].map((line) => <p key={line} className="font-editorial text-3xl text-white/92">{line}</p>)}
+        <div className="mode-line relative z-10 mx-auto mt-10 grid max-w-7xl gap-4 border-t py-8 sm:grid-cols-3">
+          {["The user decides.", "The broker advises.", "Friday guides."].map((line) => <p key={line} className="font-editorial text-3xl">{line}</p>)}
         </div>
       </section>
 
@@ -435,7 +436,7 @@ export function BrandSystemSite() {
         </div>
       </section>
 
-      <section id="ai-ui" className="cinema-bg px-5 py-24 text-white sm:px-8">
+      <section id="ai-ui" className="contrast-section px-5 py-24 sm:px-8">
         <SectionHeader eyebrow="AI Conversational UI" title="Intelligence that guides. A system that understands." copy="Friday’s AI UI is calm, factual, and human at the center. It compares without ranking by incentive and explains without pretending to advise." />
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.2fr_.8fr]">
           <Reveal><ChatPreview /></Reveal>
@@ -501,7 +502,7 @@ export function BrandSystemSite() {
         </div>
       </section>
 
-      <section className="cinema-bg px-5 py-24 text-white sm:px-8">
+      <section className="contrast-section px-5 py-24 sm:px-8">
         <SectionHeader eyebrow="Export Assets" title="Production paths for every asset." copy="The structure is ready for final SVG, PNG, app icon, product surfaces, and documented placeholders." />
         <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-3">
           {[
@@ -513,7 +514,7 @@ export function BrandSystemSite() {
             <Reveal key={label as string} className="glass rounded-[28px] p-7">
               <Icon className="text-[#8fe3c2]" />
               <p className="mt-8 font-editorial text-3xl">{label as string}</p>
-              <a href={href as string} download className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/12 px-5 py-3 text-sm">Download <ArrowRight size={16} /></a>
+              <a href={href as string} download className="mode-secondary-button mt-6 inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm">Download <ArrowRight size={16} /></a>
             </Reveal>
           ))}
         </div>
