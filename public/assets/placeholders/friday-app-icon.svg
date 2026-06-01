@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="338" cy="164" r="164" fill="#0FA98F" fill-opacity=".18"/>
+  <g filter="url(#shadow)">
+    <path d="M247 134H355C355 165.5 329.5 191 298 191H190C190 159.5 215.5 134 247 134Z" fill="url(#step)"/>
+    <path d="M202 222H316C316 253.5 290.5 279 259 279H145C145 247.5 170.5 222 202 222Z" fill="url(#step)"/>
+    <path d="M159 310H273C273 341.5 247.5 367 216 367H102C102 335.5 127.5 310 159 310Z" fill="url(#step)"/>
+  </g>
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(334 146) rotate(124) scale(418)">
+      <stop stop-color="#0A3D3A"/>
+      <stop offset=".62" stop-color="#082828"/>
+      <stop offset="1" stop-color="#020707"/>
+    </radialGradient>
+    <linearGradient id="step" x1="102" y1="250.5" x2="355" y2="250.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8FE3C2"/>
+      <stop offset="1" stop-color="#0FA98F"/>
+    </linearGradient>
+    <filter id="shadow" x="58" y="90" width="341" height="321" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#0FA98F" flood-opacity=".32"/>
+    </filter>
+  </defs>
+</svg>

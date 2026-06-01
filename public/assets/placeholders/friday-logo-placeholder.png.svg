@@ -1,0 +1,8 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="420" rx="48" fill="#F7FAF9"/>
+  <rect x="32" y="32" width="1136" height="356" rx="34" fill="white" stroke="#CBD5E1"/>
+  <text x="80" y="116" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="28" letter-spacing="8">PNG EXPORT PLACEHOLDER</text>
+  <path d="M228 156H356C356 192.5 326.5 222 290 222H162C162 185.5 191.5 156 228 156Z" fill="#0FA98F"/>
+  <path d="M184 238H312C312 274.5 282.5 304 246 304H118C118 267.5 147.5 238 184 238Z" fill="#0FA98F"/>
+  <text x="430" y="256" fill="#082828" font-family="Georgia, serif" font-size="132">friday</text>
+</svg>
