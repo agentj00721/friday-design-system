@@ -115,6 +115,15 @@ function PathMark({ className = "" }: { className?: string }) {
   );
 }
 
+function StackedLogoPreview() {
+  return (
+    <div className="flex min-h-16 flex-col items-center justify-center gap-2 rounded-2xl bg-white/70 px-4 py-3">
+      <span className="logo-slice logo-symbol-slice" aria-hidden />
+      <span className="logo-slice logo-word-slice" aria-label="Friday stacked logo preview" />
+    </div>
+  );
+}
+
 function PathStair() {
   return (
     <div className="relative mx-auto h-[360px] w-full max-w-xl sm:h-[520px]" aria-hidden>
@@ -342,7 +351,9 @@ export function BrandSystemSite() {
             <div className="mt-6 grid gap-3 sm:grid-cols-3">
               {["Horizontal", "Stacked", "Icon only"].map((label, i) => (
                 <div key={label} className="rounded-3xl border border-slate-200/70 bg-white/45 p-5 text-center dark:border-white/10 dark:bg-white/5">
-                  {i === 2 ? <PathMark className="mx-auto" /> : <Image src="/assets/logo/friday_logo_transparent.png" alt={`${label} logo preview`} width={220} height={64} className="mx-auto h-10 w-auto object-contain" />}
+                  {i === 0 && <Image src="/assets/logo/friday_logo_transparent.png" alt={`${label} logo preview`} width={220} height={64} className="mx-auto h-10 w-auto object-contain" />}
+                  {i === 1 && <StackedLogoPreview />}
+                  {i === 2 && <PathMark className="mx-auto" />}
                   <p className="mt-4 text-xs uppercase tracking-[0.2em] text-slate-500">{label}</p>
                 </div>
               ))}

@@ -142,6 +142,26 @@ body {
   border-color: rgba(255, 255, 255, 0.18);
 }
 
+.logo-slice {
+  display: block;
+  background-image: url("/assets/logo/friday_logo_transparent.png");
+  background-repeat: no-repeat;
+}
+
+.logo-symbol-slice {
+  width: 4.9rem;
+  height: 3.35rem;
+  background-size: 11.4rem auto;
+  background-position: left center;
+}
+
+.logo-word-slice {
+  width: 7.9rem;
+  height: 2.5rem;
+  background-size: 11.4rem auto;
+  background-position: right center;
+}
+
 .text-balance {
   text-wrap: balance;
 }
