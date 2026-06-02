@@ -117,9 +117,21 @@ function PathMark({ className = "" }: { className?: string }) {
 
 function StackedLogoPreview() {
   return (
-    <div className="flex min-h-16 flex-col items-center justify-center gap-2 rounded-2xl bg-white/70 px-4 py-3">
-      <span className="logo-slice logo-symbol-slice" aria-hidden />
-      <span className="logo-slice logo-word-slice" aria-label="Friday stacked logo preview" />
+    <div className="logo-display-tile flex min-h-28 flex-col items-center justify-center gap-1 rounded-2xl px-5 py-4">
+      <Image
+        src="/assets/logo/friday_symbol_transparent.png"
+        alt=""
+        width={299}
+        height={231}
+        className="h-12 w-auto object-contain"
+      />
+      <Image
+        src="/assets/logo/friday_wordmark_transparent.png"
+        alt="Friday stacked logo preview"
+        width={558}
+        height={240}
+        className="h-10 w-auto object-contain"
+      />
     </div>
   );
 }
@@ -347,13 +359,15 @@ export function BrandSystemSite() {
         <SectionHeader eyebrow="Logo System" title="Engineered for clarity. Designed for confidence." copy="Use the exact uploaded Friday logo asset. The symbol may act as a path, icon, loading state, spatial metaphor, or product signature." />
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[.9fr_1.1fr]">
           <Reveal className="glass rounded-[30px] p-8">
-            <Image src="/assets/logo/friday_logo_transparent.png" alt="Friday logo lockup" width={885} height={260} className="h-auto w-full object-contain" />
+            <div className="logo-display-tile rounded-[26px] p-8">
+              <Image src="/assets/logo/friday_logo_transparent.png" alt="Friday logo lockup" width={885} height={260} className="mx-auto h-auto w-full max-w-2xl object-contain" />
+            </div>
             <div className="mt-6 grid gap-3 sm:grid-cols-3">
               {["Horizontal", "Stacked", "Icon only"].map((label, i) => (
-                <div key={label} className="rounded-3xl border border-slate-200/70 bg-white/45 p-5 text-center dark:border-white/10 dark:bg-white/5">
-                  {i === 0 && <Image src="/assets/logo/friday_logo_transparent.png" alt={`${label} logo preview`} width={220} height={64} className="mx-auto h-10 w-auto object-contain" />}
+                <div key={label} className="logo-display-tile rounded-3xl p-5 text-center">
+                  {i === 0 && <Image src="/assets/logo/friday_logo_transparent.png" alt={`${label} logo preview`} width={220} height={64} className="mx-auto h-11 w-auto object-contain" />}
                   {i === 1 && <StackedLogoPreview />}
-                  {i === 2 && <PathMark className="mx-auto" />}
+                  {i === 2 && <Image src="/assets/logo/friday_symbol_transparent.png" alt={`${label} logo preview`} width={299} height={231} className="mx-auto h-20 w-auto object-contain" />}
                   <p className="mt-4 text-xs uppercase tracking-[0.2em] text-slate-500">{label}</p>
                 </div>
               ))}
