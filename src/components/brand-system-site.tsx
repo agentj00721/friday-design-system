@@ -117,20 +117,20 @@ function PathMark({ className = "" }: { className?: string }) {
 
 function StackedLogoPreview() {
   return (
-    <div className="logo-display-tile flex min-h-28 flex-col items-center justify-center gap-1 rounded-2xl px-5 py-4">
+    <div className="flex min-h-28 flex-col items-center justify-center gap-0 px-3 py-3">
       <Image
         src="/assets/logo/friday_symbol_transparent.png"
         alt=""
         width={299}
         height={231}
-        className="h-12 w-auto object-contain"
+        className="h-16 w-auto object-contain"
       />
       <Image
         src="/assets/logo/friday_wordmark_transparent.png"
         alt="Friday stacked logo preview"
         width={558}
         height={240}
-        className="h-10 w-auto object-contain"
+        className="-mt-1 h-12 w-auto object-contain"
       />
     </div>
   );
